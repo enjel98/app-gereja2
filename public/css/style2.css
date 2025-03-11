@@ -388,5 +388,28 @@
     }
 }
 
+/* navabar */
+/* Target hanya dropdown-menu dari BERANDA dan ORGANISASI */
+.nav-item.dropdown .dropdown-menu .dropdown-item {
+    position: relative;
+    padding-bottom: 5px;
+}
+
+/* Efek garis bawah animasi */
+.nav-item.dropdown .dropdown-menu .dropdown-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background: #ee2012;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Saat hover, garis bawah muncul */
+.nav-item.dropdown .dropdown-menu .dropdown-item:hover::after {
+    width: 100%;
+}
 
 

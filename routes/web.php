@@ -14,10 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('layout.index');
 });
 
 
 Route::get('/admin', function () {
     return view('admin.index');
+});
+
+Route::get('/fhk', function () {
+    return view('home-page.fhk');
+});
+
+Route::get('/login', function () {
+    return view('auth.login');
 });
