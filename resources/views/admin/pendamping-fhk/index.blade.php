@@ -49,7 +49,7 @@
                                         <button class="btn btn-sm btn-primary"><i class="fas fa-download"></i></button>
                                     </td>
                                     <td>
-                                        <a href="{{route('fhk.edit', $item->id)}}" class="btn btn-sm btn-warning"><i
+                                        <a href="{{route('pendamping-fhk.edit', $item->id)}}" class="btn btn-sm btn-warning"><i
                                                 class="fas fa-edit"></i></a>
                                         <button type="button" onclick="deleteFhk({{$item->id}})"
                                                 class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></button>

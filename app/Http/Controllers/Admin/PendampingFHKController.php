@@ -25,7 +25,7 @@ class PendampingFHKController extends Controller
             'judul' => 'required|string|max:255',
             'deskripsi' => 'sometimes|string',
             'tanggal' => 'required|date',
-            'file_pendampingfhk' => 'nullable|file|mimes:pdf,doc,docx|max:2048'
+            'file' => 'nullable|file|mimes:pdf,doc,docx|max:2048'
         ]);
 
         $pendampingfhk = new PendampingFHK();
@@ -33,8 +33,8 @@ class PendampingFHKController extends Controller
         $pendampingfhk->deskripsi = $request->deskripsi ?? '-';
         $pendampingfhk->tanggal = $request->tanggal;
 
-        if ($request->hasFile('file_pendampingfhk')) {
-            $file = $request->file('file_pendampingfhk');
+        if ($request->hasFile('file')) {
+            $file = $request->file('file');
             $filename = time() . '_' . $file->getClientOriginalName();
             $file->storeAs('public/pendamping-fhk', $filename); // Simpan ke storage
             $pendampingfhk->file_pendampingfhk = $filename;
