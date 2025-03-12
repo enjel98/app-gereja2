@@ -3,36 +3,36 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
         <div class="sidebar-brand-icon">
-            <img src="assets/img/logos/logogereja.png"  style="width:100px;height:50px;" alt="Logo">
+            <img src="{{ asset('assets/img/logos/logogereja.png') }}" style="width:100px; height:50px;" alt="Logo">
         </div>
         <div class="sidebar-brand-text ms-0">PP-MG KGPM</div>
     </a>
 
     <!-- Search Bar -->
-{{--    <div class="sidebar-heading">--}}
-{{--        <input type="text" class="form-control" placeholder="Search">--}}
-{{--    </div>--}}
+    {{--    <div class="sidebar-heading">--}}
+    {{--        <input type="text" class="form-control" placeholder="Search">--}}
+    {{--    </div>--}}
 
-    <!-- Nav Item - Home -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
+    <li class="nav-item {{ Request::is('admin') ? 'active bg-primary' : '' }}">
+        <a class="nav-link" href="{{ route('dashboard.index') }}">
             <i class="fas fa-home"></i>
-            <span>Home</span>
+            <span>Dashboard</span>
         </a>
     </li>
 
     <!-- Nav Item - FHK -->
-    <li class="nav-item active">
-        <a class="nav-link" href="#">
+    <li class="nav-item {{ Request::is('admin/fhk*') ? 'active bg-primary' : '' }}">
+        <a class="nav-link" href="{{ route('fhk.index') }}">
             <i class="fas fa-file-word"></i>
             <span>FHK</span>
         </a>
     </li>
 
+
     <!-- Nav Item - Pendamping FHK -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
-            <i class="fas fa-user-friends"></i>
+    <li class="nav-item {{ Request::is('admin/pendamping-fhk*') ? 'active bg-primary' : '' }}">
+        <a class="nav-link" href="{{ route('pendamping-fhk.index') }}">
+            <i class="fas fa-file-word"></i>
             <span>Pendamping FHK</span>
         </a>
     </li>
