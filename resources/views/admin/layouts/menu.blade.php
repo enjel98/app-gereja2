@@ -1,19 +1,17 @@
 <ul class="navbar-nav bg-gradient-danger sidebar sidebar-dark accordion" id="accordionSidebar">
-
     <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+    <div class="sidebar-brand d-flex flex-column align-items-center justify-content-center mt-3">
         <div class="sidebar-brand-icon">
             <img src="{{ asset('assets/img/logos/logogereja.png') }}" style="width:100px; height:50px;" alt="Logo">
         </div>
-        <div class="sidebar-brand-text ms-0">PP-MG KGPM</div>
-    </a>
+        <div class="sidebar-brand-text mt-2">PP-MG KGPM</div>
+    </div>
 
-    <!-- Search Bar -->
-    {{--    <div class="sidebar-heading">--}}
-    {{--        <input type="text" class="form-control" placeholder="Search">--}}
-    {{--    </div>--}}
+    <!-- Divider -->
+    <hr class="sidebar-divider my-0">
 
-    <li class="nav-item {{ Request::is('admin') ? 'active bg-primary' : '' }}">
+    <!-- Nav Item - Dashboard -->
+    <li class="nav-item {{ Request::is('admin') ? 'active bg-primary' : '' }} mt-4">
         <a class="nav-link" href="{{ route('dashboard.index') }}">
             <i class="fas fa-home"></i>
             <span>Dashboard</span>
@@ -27,7 +25,6 @@
             <span>FHK</span>
         </a>
     </li>
-
 
     <!-- Nav Item - Pendamping FHK -->
     <li class="nav-item {{ Request::is('admin/pendamping-fhk*') ? 'active bg-primary' : '' }}">
@@ -86,8 +83,8 @@
     </li>
 
     <!-- Nav Item - Persembahan Pelayanan -->
-    <li class="nav-item">
-        <a class="nav-link" href="#">
+    <li class="nav-item {{ Request::is('admin/persembahan*') ? 'active bg-primary' : '' }}">
+        <a class="nav-link" href="{{route(('persembahan.index'))}}">
             <i class="fas fa-hand-holding-heart"></i>
             <span>Persembahan Pelayanan</span>
         </a>
@@ -110,10 +107,14 @@
     </li>
 
     <!-- Nav Item - User -->
-    <li class="nav-item">
+    <li class="nav-item has-submenu">
         <a class="nav-link" href="#">
-            <i class="fas fa-users-cog"></i>
-            <span>User</span>
+            <i class="fas fa-users-cog"></i> User
+            <span class="submenu-toggle">&#9662;</span>
         </a>
+        <ul class="submenu">
+            <li><a href="#"><i class="fas fa-user-check"></i> Verif User</a></li>
+            <li><a href="#"><i class="fas fa-list"></i> Daftar User</a></li>
+        </ul>
     </li>
 </ul>

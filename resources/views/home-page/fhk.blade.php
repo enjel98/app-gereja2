@@ -41,7 +41,7 @@
                         <table class="table table-responsive table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>#</th>
+                                <th>No</th>
                                 <th>Judul</th>
                                 <th>JudulTema & Bacaan Alkitab</th>
                                 <th>Download</th>

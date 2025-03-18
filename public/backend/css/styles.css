@@ -1,28 +1,84 @@
-/* Menu */
-.sidebar-brand {
-    white-space: nowrap;
-}
-.sidebar-brand-icon img {
-    max-height: 50px;
-}
-
-.sidebar-brand-text {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+#wrapper{
+    display: flex;
 }
 
 .sidebar {
-    width: 280px !important;
+    background: linear-gradient(135deg, #b71c1c, #e53935) !important;
+    color: white !important;
+    width: 250px !important;
+    min-height: 100vh !important;
+    position: fixed; /* Sidebar tetap di tempat */
+    transition: all 0.3s ease !important;
+    overflow-y: auto; /* Jika sidebar panjang, bisa di-scroll sendiri */
 }
-.sidebar .nav-item .nav-link {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
-    text-align: left;
-    font-size: 20px;
+
+/* Konten agar tidak tertutup sidebar */
+#content-wrapper {
+    margin-left: 250px; /* Sama dengan lebar sidebar */
+    width: calc(100% - 250px);
+    overflow-y: auto;
+    height: 100vh; /* Biar bisa di-scroll */
+}
+
+.sidebar .nav-item {
+    transition: all 0.3s ease !important;
+}
+
+.sidebar .nav-item a {
+    color: white !important;
+    font-size: 16px !important;
+    padding: 12px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    border-radius: 5px !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.sidebar .nav-item a i {
+    font-size: 18px !important;
+    margin-right: 12px !important;
+}
+
+/* Hover effect */
+.sidebar .nav-item:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-left: 5px solid white !important;
+}
+
+/* Efek aktif */
+.sidebar .nav-item.active {
+    background: #266dbe !important;
+    color: #b71c1c !important;
+    border-left: 5px solid #b71c1c !important;
+}
+
+.sidebar .nav-item.active a {
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+/* Divider */
+.sidebar-divider {
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+
+/*userr*/
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 0 !important; /* Samakan dengan nav utama */
+    margin: 0 !important;
+}
+
+.has-submenu.active-submenu .submenu {
+    display: block !important;
+}
+
+.submenu li {
+    font-size: 10px !important;
+    margin: 0 !important;  /* Hapus margin antar item */
+    padding: 1px 0 !important; /* Kurangi padding agar lebih dekat */
+    line-height: 1.2 !important; /* Gunakan nilai 1.2 atau 1.5 agar tetap terbaca */
 }
 

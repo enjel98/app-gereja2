@@ -412,4 +412,39 @@
     width: 100%;
 }
 
+.custom-text {
+    max-width: 80%;  /* Batas lebar teks agar tidak terlalu panjang */
+    margin: 0 auto;  /* Posisikan teks di tengah */
+    word-wrap: break-word;  /* Putuskan kata jika terlalu panjang */
+    white-space: normal;  /* Izinkan teks pindah ke baris baru */
+    text-align: justify; /* Rata kiri-kanan untuk tampilan lebih rapi */
+    line-height: 1.6; /* Tambahkan jarak antar baris agar lebih enak dibaca */
+}
+.modal-body img {
+    width: 100%; /* Gambar selalu memenuhi container */
+    aspect-ratio: 16 / 9; /* Atur rasio aspek (bisa 4/3, 16/9, atau sesuai kebutuhan) */
+    object-fit: cover; /* Pastikan gambar tetap proporsional tanpa distorsi */
+    border-radius: 5px; /* Opsional, untuk tampilan lebih estetik */
+}
+
+.image-container {
+    width: 100%;
+    height: 300px; /* Sesuaikan tinggi yang diinginkan */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.modal-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.berita-item:hover {
+    box-shadow: 0px 0px 15px rgba(86, 84, 84, 0.57);
+    transform: scale(1.05);
+    transition: box-shadow 0.3s ease-in-out;
+}
 

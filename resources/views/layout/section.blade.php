@@ -6,7 +6,7 @@
         </div>
         <div class="row">
             <div class="col-lg-6">
-                <div class="course-col ">
+                <div class="course-col mb-4 ">
                     <h2>SUARA GEMBALA</h2>
                     <h3>SAMBUTAN KETUA MG DALAM PELUNCURAN WEBSITE KGPM</h3>
                     <p><em>Oleh: Gbl Ferra Lintong</em></p>
@@ -20,7 +20,7 @@
                     </p>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 ">
                 <div class="course-col overflow-auto">
                     <h2>MIMBAR KGPM</h2>
                     <h3>SAMBUTAN PUCUK PIMPINAN PADA PEMBUKAAN SIDANG TAHUNAN KGPM TAHUN 2024</h3>
